@@ -1,4 +1,4 @@
-Exercise CQ9.4: Write a C program to print out the circumference and area of a circle with radius r where r is entered from the keyboard.
+//Exercise CQ9.4: Write a C program to print out the circumference and area of a circle with radius r where r is entered from the keyboard.
 #include <stdio.h>
 #define PI 3.14159265358979323846
 
@@ -13,7 +13,7 @@ int main() {
     return 0;
 }
 
-Exercise CQ9.5: Write a C program to print out f(x) = log(|x|)+exp(x) +x where the real number x is entered from the keyboard.
+//Exercise CQ9.5: Write a C program to print out f(x) = log(|x|)+exp(x) +x where the real number x is entered from the keyboard.
 #include <stdio.h>
 #include <math.h>
 
@@ -26,7 +26,7 @@ int main() {
     return 0;
 }
 
-Exercise CQ9.6: Write a C program to print out list of prime numbers which is smaller than n, where the integer number n is entered from the keyboard.
+//Exercise CQ9.6: Write a C program to print out list of prime numbers which is smaller than n, where the integer number n is entered from the keyboard.
 #include <stdio.h>
 
 int is_prime(int num) {
