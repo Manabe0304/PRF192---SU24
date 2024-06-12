@@ -81,4 +81,43 @@ int main(){
     return 0;
 }
 
+//Prime Numbers
+#include <stdio.h>
 
+void Input(int a[], int n){
+    int i;
+    for (i = 0; i < n; i++){
+        printf("A[%d]: ", i);
+        scanf("%d", &a[i]);
+    }
+}
+
+void Output(const int a[], int n){
+    int i;
+    printf("Output:");
+    for (i = 0; i < n; i++)
+       printf(" %d", a[i]);
+    printf("\n");
+}
+ int IsPrime(int n){
+     if (n < 2) return 0;
+     else{
+         int i;
+         for (i = 2; i < n; i++)
+            if(n%i == 0) return 0;
+         return 1;
+     }
+ }
+ void Primes(const int  a[], int n){
+     int i;
+     printf("The Prime numbers:");
+     for (i = 0; i < n; i++)
+         if(IsPrime(a[i])) printf(" %d", a[i]);
+ }
+ int main(){
+     int N, A[1000];
+     printf("N = "); scanf("%d", &N);
+     Input(A,N); Output(A,N);
+     Primes(A,N);
+     return 0;
+ }
