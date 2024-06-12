@@ -1,0 +1,23 @@
+//Mang 1 chieu
+#include <stdio.h>
+
+int main(){
+    int B[6] = {2, 1, 3};
+    int i;
+    printf("Array B at address: %x", &B[6]);
+    for (i = 0; i < 6; i++)
+        printf("\nB[%d] = %d at address: %x", i, B[i], &B[i]);
+    return 0;
+}
+
+#include <stdio.h>
+
+int main(){
+    int C[3][3] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+    int i, j;
+    printf("Array C at address: %x", C);
+    for (i = 0; i < 3; i++)
+           for (j = 0; j < 3; j++)
+                printf("\nC[%d][%d] = %d at address: %x", i, j, C[i][j], &C[i][j]);
+    return 0;
+}
