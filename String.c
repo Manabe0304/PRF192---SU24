@@ -46,3 +46,19 @@ int main(){
 	symmetricString(s);
 	return 0;
 }
+
+#include <stdio.h>
+#include <string.h>
+int main(){
+	int d = 0;
+	char S1[100], S2[20], *p;
+	printf("S1: "); gets(S1);
+	printf("S2: "); gets(S2);
+	p = strstr(S1,S2);
+	while(p != NULL){
+		d = d + 1;
+		p = strstr(p+1, S2); //vi tri tim kiem ke tiep
+	}
+	printf("Xau \"%s\" hien trong xau \"%s\" %d lan", S2, S1, d);
+	return 0;
+}
