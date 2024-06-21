@@ -23,3 +23,26 @@ int main(){
     printf("Number of words: %d", d);
     return 0;
 }
+
+//Check if string is symmetric or not
+#include <stdio.h>
+#include <string.h>
+
+void symmetricString(char s[]){
+	int i, n;
+	n = strlen(s);
+	for (i = 0; i < n/2; i++)
+	   if(s[i] != s[n-1-i])
+	      break;
+	if (i == n/2)
+	    printf("It is a symmetric string!");
+	else
+	    printf("It is not a symmetric string!");	      
+}
+int main(){
+	char s[100];
+	printf("Enter a string: "); gets(s);
+	printf("String: %s\n", s);
+	symmetricString(s);
+	return 0;
+}
