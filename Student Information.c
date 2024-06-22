@@ -17,10 +17,12 @@ int main(){
          printf("\nNhap thong tin cho sinh vien thu %d\n", i+1);
          printf("Nhap ID: ");
          scanf("%d", &students[i].id);
+         getchar();
          printf("Nhap ten: ");
          scanf("%[^\n]s", students[i].name);
          printf("Nhap diem: ");
          scanf("%f", &students[i].grade);
+         getchar();
     }
     printf("\nThong tin cac sinh vien da nhap: \n");
     for(i = 0; i < n; i++){
