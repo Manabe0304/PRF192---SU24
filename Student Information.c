@@ -13,8 +13,8 @@ int main(){
 
     struct Student* students = (struct Student*)malloc(n*sizeof(struct Student));
 
-    for(i=0;i<n;i++){
-         printf("\n Nhap thong tin cho sinh vien thu %d\n", i+1);
+    for(i = 0; i < n; i++){
+         printf("\nNhap thong tin cho sinh vien thu %d\n", i+1);
          printf("Nhap ID: ");
          scanf("%d", &students[i].id);
          printf("Nhap ten: ");
@@ -22,8 +22,8 @@ int main(){
          printf("Nhap diem: ");
          scanf("%f", &students[i].grade);
     }
-    printf("\n Thong tin cac sinh vien da nhap: \n");
-    for(i=0;i<n;i++){
+    printf("\nThong tin cac sinh vien da nhap: \n");
+    for(i = 0; i < n; i++){
          printf("\nSinh vien thu %d\n", i+1);
          printf("ID: %d\n", students[i].id);
          printf("Name: %s\n", students[i].name);
