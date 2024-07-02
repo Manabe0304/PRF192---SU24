@@ -1,57 +1,44 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
 
 int main() {
     char W[100], S[100];
-    int i, p, q;
+    int p, q;
     printf("Nhap W = "); scanf("%s", W);
     printf("Nhap S = "); scanf("%s", S);
     printf("P = "); scanf("%d", &p);
     printf("Q = "); scanf("%d", &q);
     int lenW = strlen(W);
     int lenS = strlen(S);
-
-    // Swap p and q if p is greater than q
+    // Swap p and q if p > q
     if (p > q) {
         int temp = p;
         p = q;
         q = temp;
     }
+    // Check if p and q are within the bounds of W
     if (p > lenW || q > lenW) {
-        return 0; 
+        return 0; // Exits if p or q is greater than the length of W
     }
     // Create a result array large enough to hold the modified string
-    char result[300]; // Ensure this is large enough to hold the new string
-    int index = 0;
+    // Ensure that the size of result is sufficient to hold the concatenated string
+    char result[300] = "";
 
     // Copy characters from W up to position p into result
-    for (i = 0; i < p; i++) {
-        result[index++] = W[i];
-    }
+    strncat(result, W, p);
 
     // Insert S at position p
-    for (i = 0; i < lenS; i++) {
-        result[index++] = S[i];
-    }
-
+    strcat(result, S);
+    
     // Copy characters from W from position p to q into result
-    for (i = p; i < q; i++) {
-        result[index++] = W[i];
-    }
-
+    strncat(result, W + p, q - p);
+    
     // Insert S at position q
-    for (i = 0; i < lenS; i++) {
-        result[index++] = S[i];
-    }
-
+    strcat(result, S);
+    
     // Copy the remaining characters from W after position q into result
-    for (i = q; i < lenW; i++) {
-        result[index++] = W[i];
-    }
-
-    result[index] = '\0'; // Null-terminate the result string
-
+    strcat(result, W + q);
+    
     printf("Ket qua: %s", result);
 
     return 0;
