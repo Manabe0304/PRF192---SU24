@@ -18,15 +18,21 @@ void split_string_into_words(char str[]) {
     char *token;
     int word_count = 0;
 
-    printf("The original string: %s\n", str);
+   printf("The original string: %s\n", str);
     token = strtok(temp_str, " ");
-    printf("Number of words in the string: ");
+    while (token != NULL) {
+        word_count++;
+        token = strtok(NULL, " ");
+    }
+    
+    strcpy(temp_str, str); // Copy the string again for printing words
+
+    printf("Number of words in the string: %d. They are:\n", word_count);
+    token = strtok(temp_str, " ");
     while (token != NULL) {
         printf("%s\n", token);
         token = strtok(NULL, " ");
-        word_count++;
     }
-    printf("\nTotal words: %d\n", word_count);
 }
 
 void convert_string_to_proper_form(char str[]) {
