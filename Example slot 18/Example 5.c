@@ -20,27 +20,26 @@ int main(){
     system("cls");
     int n, i, a[n];
     scanf("%d", &n);
-    if(n < 10){
+     if(n < 10){
         for (i = 0; i < n; i++) scanf("%d", &a[i]);
-    }
-    int count = 0;
-    int s[n];
-    for (i = 0; i < n; i++){
-        if(a[i] % 2 == 1 && a[i] > 0){
-        s[count] = a[i] * a[i];
-        count++;
-        }
-    }
-    printf("\nOUTPUT\n");
-    if(count > 0) {
-        sortDesc(s, count);
-        for (i = 0; i < count; i++) {
-            printf("%d ", s[i]);
-        }
-        printf("\n");
     } else {
         return 1;
     }
+    int k = 0;
+    int s[n];
+    for (i = 0; i < n; i++){
+        if(a[i] % 2 == 1 && a[i] > 0){
+            s[k] = a[i] * a[i];
+            k++;
+        }
+    }
+    sortDesc(s, k);
+    
+    printf("\nOUTPUT\n");
+    for (i = 0; i < k; i++) {
+        printf("%d ", s[i]);
+    }
+    printf("\n");
     system("pause");
     return 0;
 }
