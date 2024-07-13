@@ -8,20 +8,23 @@
 int main() {
   system("cls");
   //INPUT - @STUDENT:ADD YOUR CODE FOR INPUT HERE:
-  int a,b; 
-  scanf("%d %d", &a, &b);
+  int m, n, temp;
+  int i, sum = 0; 
+  scanf("%d %d", &m, &n);
 
-void swap(int *x, int *y) {
-    int temp = *x;
-    *x = *y;
-    *y = temp;
-}
+  if (m > n) {
+    temp = m;
+    m = n;
+    n = temp;
+  }
 
   // Fixed Do not edit anything here.
   printf("\nOUTPUT:\n");
   //@STUDENT: WRITE YOUR OUTPUT HERE:
-  swap(&a, &b);
-  printf("%d", (a*(a+1))/2 - (b*(b-1))/2);
+  for (i = m; i <= n; i++) {
+    sum += i;
+  }
+  printf("%d", m, n, sum);
 
   //--FIXED PART - DO NOT EDIT ANY THINGS HERE
   printf("\n");
