@@ -24,7 +24,7 @@ int main() {
   for (i = m; i <= n; i++) {
     sum += i;
   }
-  printf("%d", m, n, sum);
+  printf("%d", sum);
 
   //--FIXED PART - DO NOT EDIT ANY THINGS HERE
   printf("\n");
