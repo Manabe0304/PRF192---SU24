@@ -9,14 +9,11 @@ int main() {
   system("cls");
   //INPUT - @STUDENT:ADD YOUR CODE FOR INPUT HERE:
   int n, k, i, j, temp;
-  printf("Enter n = ");
   scanf("%d", &n);
   int array[n];
-  printf("Enter array = ");
   for (i = 0; i < n; i++) {
     scanf("%d", &array[i]);
   }
-  printf("Enter k = ");
   scanf("%d", &k);
 
   for (i = 0; i < n - 1; i++) {
