@@ -8,17 +8,17 @@
 int main() {
   system("cls");
   //INPUT - @STUDENT:ADD YOUR CODE FOR INPUT HERE:
-  int n;
+  int 1, n;
   scanf("%d", &n);
   int array[n];
-  for(int i=0;i<n;i++){
+  for(i=0;i<n;i++){
     scanf("%d", &array[i]);
   }
 
   // Fixed Do not edit anything here.
   printf("\nOUTPUT:\n");
   //@STUDENT: WRITE YOUR OUTPUT HERE:
-  for(int i=0;i<n;i++){
+  for(i=0;i<n;i++){
     printf("%d - %.2f\n", i+1, array[i] + (array[i]*0.08));
   }
   
