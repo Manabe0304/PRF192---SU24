@@ -8,7 +8,7 @@
 int main() {
   system("cls");
   //INPUT - @STUDENT:ADD YOUR CODE FOR INPUT HERE:
-  int i, j. n;
+  int i, j, n;
   scanf("%d", &n);
   double k, array[n];
   for(i = 0; i < n; i++) {
