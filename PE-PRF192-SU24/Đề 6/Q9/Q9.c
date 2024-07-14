@@ -8,6 +8,7 @@
 int main() {
   system("cls");
   //INPUT - @STUDENT:ADD YOUR CODE FOR INPUT HERE:
+  int i, j;
   char s1[100], s2[100], s3[100];
   fgets(s1, 100, stdin);
   s1[strcspn(s1, "\n")] = 0;
@@ -19,9 +20,9 @@ int main() {
   // Fixed Do not edit anything here.
   printf("\nOUTPUT:\n");
   //@STUDENT: WRITE YOUR OUTPUT HERE:
-  for(int i = 0; i<strlen(s1); i++){
+  for(i = 0; i<strlen(s1); i++){
     if(s1[i] == s2[0] && s1[i+1] == s2[1]){
-      for(int j = 0; j<strlen(s3); j++){
+      for(j = 0; j<strlen(s3); j++){
         printf("%c", s3[j]);
       }
       i+=1;
