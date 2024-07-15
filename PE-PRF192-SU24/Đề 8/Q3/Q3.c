@@ -22,7 +22,7 @@ int main() {
     printf("%d", count);
   
     if (count == 0) {
-         printf("There is no number divisible by %d\n", n);
+         printf("There is no number divisible by %d", n);
     }
  
   //--FIXED PART - DO NOT EDIT ANY THINGS HERE
