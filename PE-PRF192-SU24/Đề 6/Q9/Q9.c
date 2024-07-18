@@ -9,8 +9,8 @@ int main() {
   system("cls");
   //INPUT - @STUDENT:ADD YOUR CODE FOR INPUT HERE:
   int i, j;
-  char s1[100], s2[100], s3[100];
-  fgets(s1, 100, stdin);
+  char s1[1000], s2[100], s3[100];
+  fgets(s1, 1000, stdin);
   s1[strcspn(s1, "\n")] = 0;
   fgets(s2, 100, stdin);
   s2[strcspn(s2, "\n")] = 0;
